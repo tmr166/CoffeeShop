@@ -1,0 +1,25 @@
+:root {
+    --main-font-family: 'Staatliches', cursive; 
+  }
+
+body {
+    font-family: var(--main-font-family);
+    overflow: hidden;
+}
+
+.navi {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.navi .content {
+    padding-left: 20px;
+    padding-right: 20px;
+    font: 25px var(--main-font-family);
+}
+
+.navi .content:hover {
+    opacity: 0.5;
+}
