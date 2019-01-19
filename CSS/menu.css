@@ -1,0 +1,40 @@
+.menu-header {
+    font-size: 100px;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff88;
+    justify-content: space-around;
+}
+
+.menu .column {
+    display:flex;
+    flex-direction: column;
+}
+
+.menu .product {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff88;
+}
+
+.menu .product img {
+    height: 200px;
+    width: auto;
+    padding-bottom: 5px;
+}
+
+.menu .product p {
+    margin-top: 2px;
+    padding-left: 20px;
+    font-size: 20px;
+    margin-bottom:10px;
+}
+
+.menu .product .content .product-name {
+    font-size: 25px;
+    text-decoration: underline;
+}

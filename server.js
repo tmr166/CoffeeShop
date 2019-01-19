@@ -1,12 +1,13 @@
-var express = require("express");
-var express_handlebars = require("express-handlebars")
-var path = require("path")
+const express = require("express");
+const express_handlebars = require("express-handlebars")
+const path = require("path")
 
+//jquery
 
 
 //Set up Server at Port: 5000
-var app = express();
-var port = 5000;
+const app = express();
+const port = 5000;
 app.listen(port, function() {
     console.log("Server started on Port: 5000");
 });
@@ -14,6 +15,7 @@ app.listen(port, function() {
 //Folders
 app.use(express.static('CSS'));    //CSS Folder
 app.use(express.static('Images'));    //Images Folder
+app.use(express.static('node_modules/jquery/dist'));    //jquery Folder
 
 //Handlebars
 app.engine('handlebars', express_handlebars());
@@ -23,4 +25,12 @@ app.set('view engine', 'handlebars');
 app.get('/', function (req, res) {
     res.render("index");
 });
+
+app.get('/menu', function (req, res) {
+    const posts = require(`${__dirname}/JSON/theme.json`)
+    res.render("menu",posts);
+});
  
+app.get('/about', function (req, res) {
+    res.render("about");
+});
